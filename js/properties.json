@@ -1,0 +1,25 @@
+{ 
+    "product": {
+        "Artikelnummer": "15118903",
+        "Fabrikantcode": "845784935",
+        "Merk": "Sony",
+        "Garantie": "2 jaar",
+        "Garantietype": "Carry-in-garantie"
+    },
+    "algemeen": {
+        "platform": "Playstation 4",
+        "Aanbevolen voor virtual reality": "nee"
+    },
+    "opslagcapaciteit": {
+        "Totale opslagcapaciteit": "1000 GB",
+        "Werkgeheugen uitbreidbaar": "ja",
+        "Maximale capaciteit geheugenkaart": "8000 GB"
+    },
+    "Bedrade aansluitingen" : {
+        "Netwerkaansluiting": "ja",
+        "HDMI ansluiting": "ja",
+        "USB aansluiting": "ja",
+        "USB versie": 3.0,
+        "Aantal USB poorten": 2
+    }
+}

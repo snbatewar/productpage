@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="js/slider/css/responsiveslides.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="js/slider/responsiveslides.min.js"></script>
-    
+    <script src="js/slider/responsiveslides.min.js"></script>    
 </head>
-<body>    
-
+<body>   
     <header>
         <div class="layout-wrapper">
             <div class="logo">
@@ -22,10 +20,14 @@
             </div>        
             <div class="search">
                 <input type="text" class="search--input" placeholder="Zoeken naar..">
-                <button class="search--action"><i class="fas fa-search"></i></button>
+                <button class="search--action">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
             <div class="cart">            
-                <div class="icon-with-badge__icon"><i class="fas fa-shopping-cart"></i></div>
+                <div class="icon-with-badge__icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
                 <div class="icon-with-badge__badge">
                     <span class="shopping-cart-quantity-count">
                         <strong id="cart-quantity" class="badge ">0</strong>
@@ -34,34 +36,53 @@
             </div>
         </div>        
     </header>
-
     <main class="layout-wrapper">            
         <section id="product-gallery">
             <h1>Sony Playstation 4 Slim 1TB + 2de Controller</h1>
-             <a href="#">
+            <a href="#">
                 <div class="review-stars">
-                    <div class="review-stars__rating"><i class="fas fa-star"></i></div>
-                    <div class="review-stars__rating"><i class="fas fa-star"></i></div>
-                    <div class="review-stars__rating"><i class="fas fa-star"></i></div>
-                    <div class="review-stars__rating"><i class="fas fa-star"></i></div>
-                    <div class="review-stars__rating"><i class="fas fa-star-half-alt"></i></div>
+                    <div class="review-stars__rating">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-stars__rating">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-stars__rating">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-stars__rating">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-stars__rating">
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
                     <span class="review-link">110 reviews</span>
                 </div>
             </a>
             <div class="product-gallery-media">
                 <!-- Slideshow -->
                 <ul class="rslides" id="slider">
-                    <li><img src="js/slider/images/playstation-single.jpg" alt="playstation 4"></li>
-                    <li><img src="js/slider/images/playstation-combo.jpg" alt="playstation 4 combo package"></li>            
+                    <li>
+                        <img src="js/slider/images/playstation-single.jpg" alt="playstation 4">
+                    </li>
+                    <li>
+                        <img src="js/slider/images/playstation-combo.jpg" alt="playstation 4 combo package">
+                    </li>            
                 </ul>
-
                 <!-- Slideshow Pager -->
                 <ul id="slider-pager">
-                    <li><a href="#"><img src="js/slider/images/playstation-single_thumb.jpg" alt="playstation 4"></a></li>
-                    <li><a href="#"><img src="js/slider/images/playstation-combo_thumb.jpg" alt="playstation 4 combo package"></a></li>        
+                    <li>
+                        <a href="#">
+                            <img src="js/slider/images/playstation-single_thumb.jpg" alt="playstation 4">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="js/slider/images/playstation-combo_thumb.jpg" alt="playstation 4 combo package">
+                        </a>
+                    </li>        
                 </ul>
-            </div>
-            
+            </div>            
         </section>
         <section id="product-info">
             <div class="price-container">
@@ -75,46 +96,49 @@
                 <span class="min-width-145">Kies kleur:</span> 
                 <div class="radio-container">
                     <div class="control-group">
-                            <label class="container">zwart
-                                <input type="radio" name="radio" value="zwart" data-price="349,-">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">wit
-                                <input type="radio" name="radio" value="wit" data-price="370,-">
-                                <span class="checkmark"></span>
-                            </label>                        
+                        <label class="container">zwart
+                            <input type="radio" name="radio" value="zwart" data-price="349,-" onclick="checkPrice()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">wit
+                            <input type="radio" name="radio" value="wit" data-price="370,-" onclick="checkPrice()">
+                            <span class="checkmark"></span>
+                        </label>                        
                     </div>
                 </div>
                 <div class="error"></div>
             </div>
             <div class="article-container">
-                    <span class="min-width-145">Artikelnummer:</span><span id="article-number" class="article-number"></span></div>    
+                <span class="min-width-145">Artikelnummer:</span><span id="article-number" class="article-number"></span></div>    
             </div>            
            <div class="count-wrapper">
                 <span class="min-width-145">Aantal:</span>
                 <div class="calculator">
-                    <button id="btn-increment-total"><i class="fas fa-plus"></i></button>
-                    <button id="btn-decrement-total"><i class="fas fa-minus"></i></button>
+                    <button id="btn-increment-total" onclick="increaseBasket()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button id="btn-decrement-total" onclick="decreaseBasket()"
+                        <i class="fas fa-minus"></i>
+                    </button>
                     <input type="text" id="total--input" value="1" maxlength="2" onkeypress="validate(event)">
                 </div>
                 <div>
                     <span class="min-width-145">&nbsp;</span>
-                    <a id="open-modal" class="triger-modal" data-triger="modal-demo">In winkelwagen</a>                
+                    <a id="open-modal" class="triger-modal" data-triger="modal-demo" onclick="openModal()">In winkelwagen</a>                
                 </div>
             </div>
-
             <ul>
                 <li>Voor 22:00 uur besteld, morgen in huis!</li>
                 <li>Geen bezorgkosten</li>
                 <li>2 jaar garantie op je product</li>
                 <li>24 uur klantenservice</li>
-            </ul>            
-
+            </ul>
         </section>
         <section id="product-description">
                 <h2>Product omschrijving</h2>
                 <p>
-                Het PlayStation®4-systeem opent de deur naar een ongelooflijke reis door meeslepende nieuwe gamewerelden en een sterk verbonden game-community. PS4 Slim zet gamers op de eerste plaats. Door ontwikkelaars, voor gamers.
+                    Het PlayStation®4-systeem opent de deur naar een ongelooflijke reis door meeslepende nieuwe gamewerelden en 
+                    een sterk verbonden game-community. PS4 Slim zet gamers op de eerste plaats. Door ontwikkelaars, voor gamers.
                 </p>
                 <p>                
                     <strong>Inhoud Sony PlayStation 4 Slim Console 1TB + 2 Wireless Dualshock 4 Controllers V2 - Zwart PS4</strong>                
@@ -127,7 +151,8 @@
                         <li>USB-kabel</li>
                         <li>Handleiding</li>
                     </ul>                                
-                    Sony PlayStation camera + verticale stand niet inbegrepen. De camera en stand voor de Sony PlayStation 4 zijn los verkrijgbaar!            
+                    Sony PlayStation camera + verticale stand niet inbegrepen. De camera en stand voor de Sony PlayStation 4 zijn
+                    los verkrijgbaar!            
                 </p>
         </section>
         <section id="product-specification">
@@ -139,17 +164,26 @@
             <div class="modal-container">
                 <div class="modal-header">
                     <h2 class="modal-title">Winkelmandje</h2>
-                    <button class="close-modal">&times;</button>
+                    <button class="close-modal" onclick="closeModal()">&times;</button>
                 </div>
                 <div class="modal-content">
                     <h3 class="check--ok">Sony Playstation 4 Slim 1TB + 2de Controller <span id="chosen-color"></span></h3>
                     <div id="order-details">
-                        <p class="check--ok green-txt" id="success"><i class="fas fa-check"></i> Dit product is toegevoegd aan je winkelmandje</p>
-                        <p class="check--nok red-txt" id="color-required"><i class="fas fa-times"></i> &nbsp;Selecteer 1 van de kleuren</p>        
+                        <p class="check--ok green-txt" id="success">
+                            <i class="fas fa-check"></i> 
+                            Dit product is toegevoegd aan je winkelmandje
+                        </p>
+                        <p class="check--nok red-txt" id="color-required">
+                            <i class="fas fa-times"></i> 
+                            &nbsp; Selecteer 1 van de kleuren</p>        
                     </div>                   
                 </div>                
             </div>
-        </div>              
+        </div> 
+        <div id="id01"></div>     
+        <h1 id="title"></h1>
+<hr>
+<div id="text"></div>        
     </main>
     <script>
             /* Responsive Slider 
@@ -164,7 +198,6 @@
         
             });
           </script>
-
-    <script src="js/functions.js" type="text/javascript"></script>   
+    <script src="js/functions.js" type="text/javascript"></script>    
 </body>
 </html>
